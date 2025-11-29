@@ -1,4 +1,4 @@
-clamav-daily
+clamav-cronjob
 ============
 
 ClamAV is an open source (GPL) antivirus engine designed for detecting Trojans, viruses, malware and other malicious threats.
@@ -12,26 +12,16 @@ The script scans pre-defined system locations depending on the day of the week a
 The following packages are used by the script:
  
 * ClamAV
-* bsd-mailx
+* mailx (should be installed by default on Arch)
 * Rkhunter
  
 To install:
 
 ```
-$ sudo apt-get install clamav clamav-freshclam bsd-mailx rkhunter git
-$ git clone https://github.com/lisenet/clamav-daily.git
-$ chmod u+x ./clamav-daily/*.sh
-$ sudo ./clamav-daily/clamav-rkhunter-scan.sh
-```
-
-# Installation on CentOS/Rocky
-
-```
-$ sudo yum install epel-release
-$ sudo yum install clamav clamav-update rkhunter mailx git
-$ git clone https://github.com/lisenet/clamav-daily.git
-$ chmod u+x ./clamav-daily/*.sh
-$ sudo ./clamav-daily/clamav-rkhunter-scan.sh
+$ sudo pacman -S clamav mailx rkhunter git
+$ git clone https://github.com/paranoid-porygon/clamav-cronjob.git
+$ chmod u+x ./clamav-cronjob/*.sh
+$ sudo ./clamav-cronjob/clamav-rkhunter-scan.sh
 ```
 
 # Configuration
