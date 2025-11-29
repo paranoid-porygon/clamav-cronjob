@@ -12,13 +12,14 @@ The script scans pre-defined system locations depending on the day of the week a
 The following packages are used by the script:
  
 * ClamAV
-* mailx (should be installed by default on Arch)
+* inetutils
+* man-pages
 * Rkhunter
  
 To install:
 
 ```
-$ sudo pacman -S clamav mailx rkhunter git
+$ sudo pacman -S clamav rkhunter git inetutils man-pages
 $ git clone https://github.com/paranoid-porygon/clamav-cronjob.git
 $ chmod u+x ./clamav-cronjob/*.sh
 $ sudo ./clamav-cronjob/clamav-rkhunter-scan.sh

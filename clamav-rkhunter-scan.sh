@@ -1,8 +1,9 @@
 #!/bin/bash
 # AUTHOR:   Tomas Nevar (tomas@lisenet.com)
+# FORKER:   Paranoid Porygon (paranoid-porygon@proton.me)
 # NAME:     clamav-rkhunter-scan.sh
-# VERSION:  1.1
-# DATE:     17/01/2014 (dd/mm/yy)
+# VERSION:  1.1-0.1
+# DATE:     2025-11-29
 # LICENCE:  Copyleft free software
 #
 # Variables
@@ -32,15 +33,19 @@ DIRTOEXCLUDE="/backups";
 # Check for software installation.
 if ! type mail >/dev/null 2>&1; then
     echo "I require mail but it's not installed. Aborting.";
-    echo "On Debian try: apt-get install heirloom-mailx";
+    echo "On Arch, try: pacman -S man-pages";
+    exit 1;
+elif ! type hostname >/dev/null 2>&1; then
+    echo "I require hostname but it's not installed. Aborting.";
+    echo "On Arch, try: pacman -S inetutils";
     exit 1;
 elif ! type clamscan >/dev/null 2>&1; then
     echo "I require clamscan but it's not installed. Aborting.";
-    echo "On Debian try: apt-get install clamav clamav-freshclam";
+    echo "On Arch, try: pacman -S clamav";
     exit 1;
 elif ! type rkhunter >/dev/null 2>&1; then
     echo "I require rkhunter but it's not installed. Aborting.";
-    echo "On Debian try: apt-get install rkhunter";
+    echo "On Arch, try: pacman -S rkhunter";
     exit 1;
 fi
 
