@@ -13,13 +13,13 @@ The following packages are used by the script:
  
 * ClamAV
 * inetutils
-* man-pages
+* s-nail
 * Rkhunter
  
 To install:
 
 ```
-$ sudo pacman -S clamav rkhunter git inetutils man-pages
+$ sudo pacman -S clamav rkhunter git inetutils s-nail
 $ git clone https://github.com/paranoid-porygon/clamav-cronjob.git
 $ chmod u+x ./clamav-cronjob/*.sh
 $ sudo ./clamav-cronjob/clamav-rkhunter-scan.sh

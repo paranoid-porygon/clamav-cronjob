@@ -33,7 +33,7 @@ DIRTOEXCLUDE="/backups";
 # Check for software installation.
 if ! type mail >/dev/null 2>&1; then
     echo "I require mail but it's not installed. Aborting.";
-    echo "On Arch, try: pacman -S man-pages";
+    echo "On Arch, try: pacman -S s-nail";
     exit 1;
 elif ! type hostname >/dev/null 2>&1; then
     echo "I require hostname but it's not installed. Aborting.";
