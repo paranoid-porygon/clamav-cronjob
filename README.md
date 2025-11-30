@@ -15,11 +15,13 @@ The following packages are used by the script:
 * inetutils
 * s-nail
 * Rkhunter
+
+You will also need a cron implementation. My preference is cronie.
  
 To install:
 
 ```
-$ sudo pacman -S clamav rkhunter git inetutils s-nail
+$ sudo pacman -S clamav rkhunter git inetutils s-nail cronie
 $ git clone https://github.com/paranoid-porygon/clamav-cronjob.git
 $ chmod u+x ./clamav-cronjob/*.sh
 $ sudo ./clamav-cronjob/clamav-rkhunter-scan.sh
